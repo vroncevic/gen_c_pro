@@ -67,8 +67,8 @@ TOOL_NOTIFY="false"
 # __gen_c_pro "rtp"
 #
 function __gen_c_pro() {
-	local PNAME=$1
-	if [ -n "${PNAME}" ]; then
+	local PN=$1
+	if [ -n "${PN}" ]; then
 		local FUNC=${FUNCNAME[0]} MSG="None" STATUS_CONF STATUS_CONF_UTIL STATUS
 		MSG="Loading basic and util configuration!"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
@@ -92,11 +92,11 @@ function __gen_c_pro() {
 		TOOL_LOG=${config_gen_c_pro[LOGGING]}
 		TOOL_DBG=${config_gen_c_pro[DEBUGGING]}
 		TOOL_NOTIFY=${config_gen_c_pro[EMAILING]}
-		local VERSION=${config_gen_c_pro_util[VERSION]} DATE=`date` HASH="#"
-		local AUTHOR_NAME=${config_gen_c_pro_util[AUTHOR_NAME]} BSLASH="\\"
-		local AUTHOR_EMAIL=${config_gen_c_pro_util[AUTHOR_EMAIL]} TAB="	"
+		local V=${config_gen_c_pro_util[VERSION]} DATE=`date` T="	"
+		local AN=${config_gen_c_pro_util[AUTHOR_NAME]} BSL="\\" H="#"
+		local AE=${config_gen_c_pro_util[AUTHOR_EMAIL]}
 		local PROJECT_SET=${config_gen_c_pro_util[PROJECT_SET]} TREE
-		local FIRST_NEWS="Project created ${DATE}" RMSG="${HASH} Readme section"
+		local FN="Project created ${DATE}" RMSG="${H} Readme section"
 		declare -A project_set=()
 		__load_util_conf "${GEN_C_PRO_HOME}/conf/${PROJECT_SET}" project_set
 		STATUS=$?
@@ -107,15 +107,15 @@ function __gen_c_pro() {
 		fi
 		MSG="Generate project structure!"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
-		if [ -d "${PNAME}/" ]; then
-			MSG="Directory already exist [${PNAME}]"
+		if [ -d "${PN}/" ]; then
+			MSG="Directory already exist [${PN}]"
 			__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
 			MSG="Force exit!"
 			__info_debug_message_end "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
 			exit 131
 		fi
 		local CDIR=`pwd`
-		local PDIR="${CDIR}/${PNAME}"
+		local PDIR="${CDIR}/${PN}"
 		MSG="Generating directory [${PDIR}/]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
 		mkdir "${PDIR}/"
@@ -167,7 +167,7 @@ function __gen_c_pro() {
 		do
 			eval echo "${SCL}" >> ${SCF}
 		done < ${SCTF}
-		local PCF="${SRC}/${PNAME}-0.1.pc.in" PCL PCT=${project_set[PCIN]}
+		local PCF="${SRC}/${PN}-0.1.pc.in" PCL PCT=${project_set[PCIN]}
 		local PCTF="${GEN_C_PRO_HOME}/conf/${PCT}"
 		MSG="Generating file [${PCF}]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
