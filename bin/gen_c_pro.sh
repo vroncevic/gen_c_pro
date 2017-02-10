@@ -228,6 +228,9 @@ function __gen_c_pro() {
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
 		eval "chmod -R 755 ${PDIR}/"
+		MSG="Generated C project ${PDIR}/"
+		GEN_C_PRO_LOGGING[LOG_MSGE]=$MSG
+		__logging GEN_GTK_APP_LOGGING
 		__info_debug_message_end "Done" "$FUNC" "$GEN_C_PRO_TOOL"
 		TREE=$(which tree)
 		__check_tool "${TREE}"
