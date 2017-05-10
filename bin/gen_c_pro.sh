@@ -167,14 +167,12 @@ function __gen_c_pro() {
 		do
 			eval echo "${SCL}" >> ${SCF}
 		done < ${SCTF}
-		local PCF="${SRC}/${PN}-0.1.pc.in" PCL PCT=${project_set[PCIN]}
-		local PCTF="${GEN_C_PRO_HOME}/conf/${PCT}"
-		MSG="Generating file [${PCF}]"
+		local CET=${project_set[C_EDIT]}
+		local CETF=$(cat "${GEN_C_PRO_HOME}/conf/${CET}")
+		local CEF="${SRC}/.editorconfig"
+		MSG="Generating file [${CEF}]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_C_PRO_TOOL"
-		while read PCL
-		do
-			eval echo "${PCL}" >> ${PCF}
-		done < ${PCTF}
+		echo -e "${CETF}" > "${CEF}"
 		local MSF="${SRC}/Makefile.am" MST=${project_set[MAKEFILE_AMS]}
 		local MSTF="${GEN_C_PRO_HOME}/conf/${MST}" MSL
 		MSG="Generating file [${MSF}]"
