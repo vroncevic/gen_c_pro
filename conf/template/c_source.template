@@ -18,7 +18,7 @@
 " */"
 "#include <stdio.h>"
 
-"int main(void) {"
+"int main(int arg, char *argv[]) {"
 ${T}"printf(\\\"Hello world\\\");"
 ${T}"return (0);"
 "}"
