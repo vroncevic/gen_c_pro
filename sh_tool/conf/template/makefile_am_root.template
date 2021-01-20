@@ -26,5 +26,5 @@ ${H}" @brief  Process this file with automake to produce Makefile.in."
 
 ${H}" Remove doc directory on uninstall"
 "uninstall-local:"
-${T}"-rm -r \\\$(docdir)"
+"${T}-rm -r \\\$(docdir)"
 

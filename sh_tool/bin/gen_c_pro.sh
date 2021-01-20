@@ -27,11 +27,11 @@ GEN_C_PRO_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.cfg
 GEN_C_PRO_UTIL_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}_util.cfg
 GEN_C_PRO_LOG=${GEN_C_PRO_HOME}/log
 
-declare -A GEN_C_PRO_USAGE=(
-    [USAGE_TOOL]="${GEN_C_PRO_TOOL}"
-    [USAGE_ARG1]="[PROJECT NAME] C Project name"
-    [USAGE_EX_PRE]="# Generating C project"
-    [USAGE_EX]="${GEN_C_PRO_TOOL} rtp"
+declare -A GEN_C_PRO_Usage=(
+    [Usage_TOOL]="${GEN_C_PRO_TOOL}"
+    [Usage_ARG1]="[PROJECT NAME] C Project name"
+    [Usage_EX_PRE]="# Generating C project"
+    [Usage_EX]="${GEN_C_PRO_TOOL} rtp"
 )
 
 declare -A GEN_C_PRO_LOGGING=(
@@ -93,7 +93,7 @@ function __gen_c_pro {
         TOOL_LOG=${config_gen_c_pro[LOGGING]}
         TOOL_DBG=${config_gen_c_pro[DEBUGGING]}
         TOOL_NOTIFY=${config_gen_c_pro[EMAILING]}
-        local V=${config_gen_c_pro_util[VERSION]} DATE=`date` T="    "
+        local V=${config_gen_c_pro_util[VERSION]} DATE=`date` T="	"
         local AN=${config_gen_c_pro_util[AUTHOR_NAME]} BSL="\\" H="#"
         local AE=${config_gen_c_pro_util[AUTHOR_EMAIL]}
         local PROJECT_SET=${config_gen_c_pro_util[PROJECT_SET]} TREE
@@ -239,7 +239,7 @@ function __gen_c_pro {
         fi
         exit 0
     fi
-    usage GEN_C_PRO_USAGE
+    usage GEN_C_PRO_Usage
     exit 128
 }
 
