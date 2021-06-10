@@ -7,7 +7,7 @@
 # @author  Vladimir Roncevic <vladimir.roncevic@frobas.com>
 #
 UTIL_ROOT=/root/scripts
-UTIL_VERSION=ver.1.0
+UTIL_VERSION=ver.1.0.0
 UTIL=${UTIL_ROOT}/sh_util/${UTIL_VERSION}
 UTIL_LOG=${UTIL}/log
 
@@ -21,7 +21,7 @@ UTIL_LOG=${UTIL}/log
 .    ${UTIL}/bin/progress_bar.sh
 
 GEN_C_PRO_TOOL=gen_c_pro
-GEN_C_PRO_VERSION=ver.1.0
+GEN_C_PRO_VERSION=ver.1.0.0
 GEN_C_PRO_HOME=${UTIL_ROOT}/${GEN_C_PRO_TOOL}/${GEN_C_PRO_VERSION}
 GEN_C_PRO_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.cfg
 GEN_C_PRO_UTIL_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}_util.cfg
