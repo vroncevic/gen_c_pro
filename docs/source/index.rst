@@ -41,11 +41,11 @@ To install **gen_c_pro** type the following:
 
 .. code-block:: bash
 
-   tar xvzf gen_c_pro-x.y.z.tar.gz
-   cd gen_c_pro-x.y.z
-   cp -R ~/sh_tool/bin/   /root/scripts/gen_c_pro/ver.1.0/
-   cp -R ~/sh_tool/conf/  /root/scripts/gen_c_pro/ver.1.0/
-   cp -R ~/sh_tool/log/   /root/scripts/gen_c_pro/ver.1.0/
+   tar xvzf gen_c_pro-x.y.tar.gz
+   cd gen_c_pro-x.y
+   cp -R ~/sh_tool/bin/   /root/scripts/gen_c_pro/ver.x.y/
+   cp -R ~/sh_tool/conf/  /root/scripts/gen_c_pro/ver.x.y/
+   cp -R ~/sh_tool/log/   /root/scripts/gen_c_pro/ver.x.y/
 
 Or You can use Docker to create image/container.
 
@@ -69,7 +69,7 @@ Code structure:
 
 .. code-block:: bash
 
-   .
+   sh_tool/
    ├── bin/
    │   └── gen_c_pro.sh
    ├── conf/
@@ -102,9 +102,18 @@ Copyright and licence
 .. |License: Apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2016 by `vroncevic.github.io/apmodule <https://vroncevic.github.io/apmodule>`_
+Copyright (C) 2017 by `vroncevic.github.io/gen_c_pro <https://vroncevic.github.io/gen_c_pro>`_
 
 **gen_c_pro** is free software; you can redistribute it and/or modify it
 under the same terms as Bash itself, either Bash version 4.2.47 or,
 at your option, any later version of Bash 4 you may have available.
 
+**gen_c_pro** is free software; you can redistribute it and/or modify
+it under the same terms as Bash itself, either Bash version 4.2.47 or,
+at your option, any later version of Bash 4 you may have available.
+
+Lets help and support FSF.
+
+[![Free Software Foundation](https://raw.githubusercontent.com/vroncevic/gen_c_pro/dev/docs/fsf-logo_1.png)](https://my.fsf.org/)
+
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://my.fsf.org/donate/)
