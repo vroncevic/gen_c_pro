@@ -1,13 +1,13 @@
 #!/bin/bash
 #
 # @brief   Generate C project
-# @version ver.1.0.0
-# @date    Thu Feb 07 00:46:32 2016
-# @company None, free software to use 2016
-# @author  Vladimir Roncevic <vladimir.roncevic@frobas.com>
+# @version ver.2.0
+# @date    Sun 05 Dec 2021 04:20:14 PM CET
+# @company None, free software to use 2021
+# @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 UTIL_ROOT=/root/scripts
-UTIL_VERSION=ver.1.0.0
+UTIL_VERSION=ver.1.0
 UTIL=${UTIL_ROOT}/sh_util/${UTIL_VERSION}
 UTIL_LOG=${UTIL}/log
 
@@ -21,17 +21,24 @@ UTIL_LOG=${UTIL}/log
 .    ${UTIL}/bin/progress_bar.sh
 
 GEN_C_PRO_TOOL=gen_c_pro
-GEN_C_PRO_VERSION=ver.1.0.0
+GEN_C_PRO_VERSION=ver.2.0
 GEN_C_PRO_HOME=${UTIL_ROOT}/${GEN_C_PRO_TOOL}/${GEN_C_PRO_VERSION}
 GEN_C_PRO_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.cfg
 GEN_C_PRO_UTIL_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}_util.cfg
+GEN_C_PRO_LOGO=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.logo
 GEN_C_PRO_LOG=${GEN_C_PRO_HOME}/log
 
-declare -A GEN_C_PRO_Usage=(
-    [Usage_TOOL]="${GEN_C_PRO_TOOL}"
-    [Usage_ARG1]="[PROJECT NAME] C Project name"
-    [Usage_EX_PRE]="# Generating C project"
-    [Usage_EX]="${GEN_C_PRO_TOOL} rtp"
+tabs 4
+CONSOLE_WIDTH=$(stty size | awk '{print $2}')
+
+.    ${GEN_C_PRO_HOME}/bin/center.sh
+.    ${GEN_C_PRO_HOME}/bin/display_logo.sh
+
+declare -A GEN_C_PRO_USAGE=(
+    [USAGE_TOOL]="${GEN_C_PRO_TOOL}"
+    [USAGE_ARG1]="[PROJECT NAME] C Project name"
+    [USAGE_EX_PRE]="# Generating C project"
+    [USAGE_EX]="${GEN_C_PRO_TOOL} rtp"
 )
 
 declare -A GEN_C_PRO_LOGGING=(
@@ -68,6 +75,7 @@ TOOL_NOTIFY="false"
 #
 function __gen_c_pro {
     local PN=$1
+    display_logo
     if [ -n "${PN}" ]; then
         local FUNC=${FUNCNAME[0]} MSG="None"
         local STATUS_CONF STATUS_CONF_UTIL STATUS
@@ -239,7 +247,7 @@ function __gen_c_pro {
         fi
         exit 0
     fi
-    usage GEN_C_PRO_Usage
+    usage GEN_C_PRO_USAGE
     exit 128
 }
 
@@ -262,4 +270,3 @@ if [ $STATUS -eq $SUCCESS ]; then
 fi
 
 exit 127
-
