@@ -124,7 +124,7 @@ Lets help and support FSF.
 
 |Free Software Foundation|
 
-.. |Free Software Foundation| image:: https://raw.githubusercontent.com/vroncevic/apmodule/dev/docs/fsf-logo_1.png
+.. |Free Software Foundation| image:: https://raw.githubusercontent.com/vroncevic/gen_c_pro/dev/docs/fsf-logo_1.png
    :target: https://my.fsf.org/
 
 |Donate|
