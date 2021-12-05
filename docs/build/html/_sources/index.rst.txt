@@ -122,6 +122,19 @@ at your option, any later version of Bash 4 you may have available.
 
 Lets help and support FSF.
 
-[![Free Software Foundation](https://raw.githubusercontent.com/vroncevic/gen_c_pro/dev/docs/fsf-logo_1.png)](https://my.fsf.org/)
+|Free Software Foundation|
 
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://my.fsf.org/donate/)
+.. |Free Software Foundation| image:: https://raw.githubusercontent.com/vroncevic/apmodule/dev/docs/fsf-logo_1.png
+   :target: https://my.fsf.org/
+
+|Donate|
+
+.. |Donate| image:: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
+   :target: https://my.fsf.org/donate/
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
