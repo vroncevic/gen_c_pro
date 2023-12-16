@@ -6,7 +6,7 @@
 
 Developed in **[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell))** code: **100%**.
 
-[![gen_c_pro shell checker](https://github.com/vroncevic/gen_c_pro/workflows/gen_c_pro%20shell%20checker/badge.svg)](https://github.com/vroncevic/gen_c_pro/actions?query=workflow%3A%22gen_c_pro+shell+checker%22)
+[![gen_cc_pro_shell_checker](https://github.com/vroncevic/gen_cc_pro/actions/workflows/gen_cc_pro_shell_checker.yml/badge.svg)](https://github.com/vroncevic/gen_cc_pro/actions/workflows/gen_cc_pro_shell_checker.yml)
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
@@ -86,8 +86,6 @@ lrwxrwxrwx 1 root root 48 Dec  5 16:25 /root/bin/gen_c_pro -> /root/scripts/gen_
 
 Or You can use docker to create image/container.
 
-[![gen_c_pro docker checker](https://github.com/vroncevic/gen_c_pro/workflows/gen_c_pro%20docker%20checker/badge.svg)](https://github.com/vroncevic/gen_c_pro/actions?query=workflow%3A%22gen_c_pro+docker+checker%22)
-
 ### Usage
 
 ```
@@ -106,12 +104,16 @@ Sun 05 Dec 2021 04:27:07 PM CET
 [check_root] Check permission for current session? [ok]
 [check_root] Done
 
-	                                           
-	  __ _  ___ _ __     ___   _ __  _ __ ___  
-	 / _` |/ _ \ '_ \   / __| | '_ \| '__/ _ \ 
-	| (_| |  __/ | | | | (__  | |_) | | | (_) |
-	 \__, |\___|_| |_|  \___| | .__/|_|  \___/ 
-	 |___/                    |_|              
+                                                                         
+                                                ██████                   
+    █████   █████  ███████         █████       ░██░░░██ ██████  ██████   
+   ██░░░██ ██░░░██░░██░░░██       ██░░░██      ░██  ░██░░██░░█ ██░░░░██  
+  ░██  ░██░███████ ░██  ░██      ░██  ░░       ░██████  ░██ ░ ░██   ░██  
+  ░░██████░██░░░░  ░██  ░██      ░██   ██      ░██░░░   ░██   ░██   ░██  
+   ░░░░░██░░██████ ███  ░██ █████░░█████  █████░██     ░███   ░░██████   
+    █████  ░░░░░░ ░░░   ░░ ░░░░░  ░░░░░  ░░░░░ ░░      ░░░     ░░░░░░    
+   ░░░░░                                                                 
+                                                                          
 	                                           
 		Info   github.io/gen_c_pro ver.2.0 
 		Issue  github.io/issue
@@ -225,17 +227,17 @@ sh_tool/
 
 ### Docs
 
-[![Documentation Status](https://readthedocs.org/projects/gen_c_pro/badge/?version=latest)](https://gen_c_pro.readthedocs.io/projects/gen_c_pro/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/gen_c_pro/badge/?version=latest)](https://gen-c-pro.readthedocs.io/projects/gen_c_pro/en/latest/?badge=latest)
 
 More documentation and info at
-* [https://gen_c_pro.readthedocs.io/en/latest/](https://gen_c_pro.readthedocs.io/en/latest/)
+* [https://gen_c_pro.readthedocs.io/en/latest/](https://gen-c-pro.readthedocs.io/en/latest/)
 * [https://www.gnu.org/software/bash/manual/](https://www.gnu.org/software/bash/manual/)
 
 ### Copyright and licence
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2017 by [vroncevic.github.io/gen_c_pro](https://vroncevic.github.io/gen_c_pro)
+Copyright (C) 2017 - 2024 by [vroncevic.github.io/gen_c_pro](https://vroncevic.github.io/gen_c_pro)
 
 **gen_c_pro** is free software; you can redistribute it and/or modify
 it under the same terms as Bash itself, either Bash version 4.2.47 or,
