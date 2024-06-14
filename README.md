@@ -1,6 +1,6 @@
-<img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_c_pro/dev/docs/gen_c_pro_logo.png" width="25%">
-
 # Generate C Project
+
+<img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_c_pro/dev/docs/gen_c_pro_logo.png" width="25%">
 
 **gen_c_pro** is shell tool for generating C project.
 
@@ -35,7 +35,7 @@ Navigate to release **[page](https://github.com/vroncevic/gen_c_pro/releases)** 
 
 To install **gen_c_pro** type the following
 
-```
+```bash
 tar xvzf gen_c_pro-x.y.tar.gz
 cd gen_c_pro-x.y
 cp -R ~/sh_tool/bin/   /root/scripts/gen_c_pro/ver.x.y/
@@ -44,7 +44,8 @@ cp -R ~/sh_tool/log/   /root/scripts/gen_c_pro/ver.x.y/
 ```
 
 Self generated setup script and execution
-```
+
+```bash
 ./gen_c_pro_setup.sh 
 
 [setup] installing App/Tool/Script gen_c_pro
@@ -88,7 +89,7 @@ Or You can use docker to create image/container.
 
 ### Usage
 
-```
+```bash
 # Create symlink for shell tool
 ln -s /root/scripts/gen_c_pro/ver.x.y/bin/gen_c_pro.sh /root/bin/gen_c_pro
 
@@ -198,7 +199,8 @@ Sun 05 Dec 2021 04:27:07 PM CET
 **gen_c_pro** is based on MOP.
 
 Shell tool structure
-```
+
+```bash
 sh_tool/
 ├── bin/
 │   ├── center.sh
