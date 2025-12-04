@@ -19,6 +19,7 @@ UTIL_LOG=${UTIL}/log
 .    ${UTIL}/bin/load_conf.sh
 .    ${UTIL}/bin/load_util_conf.sh
 .    ${UTIL}/bin/progress_bar.sh
+.    ${UTIL}/bin/display_logo.sh
 
 GEN_C_PRO_TOOL=gen_c_pro
 GEN_C_PRO_VERSION=ver.3.0
@@ -27,12 +28,6 @@ GEN_C_PRO_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.cfg
 GEN_C_PRO_UTIL_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}_util.cfg
 GEN_C_PRO_LOGO=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.logo
 GEN_C_PRO_LOG=${GEN_C_PRO_HOME}/log
-
-tabs 4
-CONSOLE_WIDTH=$(stty size | awk '{print $2}')
-
-.    ${GEN_C_PRO_HOME}/bin/center.sh
-.    ${GEN_C_PRO_HOME}/bin/display_logo.sh
 
 declare -A GEN_C_PRO_USAGE=(
     [USAGE_TOOL]="${GEN_C_PRO_TOOL}"
@@ -75,8 +70,8 @@ TOOL_NOTIFY="false"
 #
 function __gen_c_pro {
     local PN=$1
-    display_logo
     if [ -n "${PN}" ]; then
+        display_logo "vroncevic" "${GEN_C_PRO_TOOL}" "${GEN_C_PRO_VERSION}" "${GEN_C_PRO_LOGO}"
         local FUNC=${FUNCNAME[0]} MSG="None"
         local STATUS_CONF STATUS_CONF_UTIL STATUS
         MSG="Loading basic and util configuration!"
