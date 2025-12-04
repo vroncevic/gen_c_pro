@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # @brief   Generate C project
-# @version ver.2.0
+# @version ver.3.0
 # @date    Sun 05 Dec 2021 04:20:14 PM CET
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
@@ -21,7 +21,7 @@ UTIL_LOG=${UTIL}/log
 .    ${UTIL}/bin/progress_bar.sh
 
 GEN_C_PRO_TOOL=gen_c_pro
-GEN_C_PRO_VERSION=ver.2.0
+GEN_C_PRO_VERSION=ver.3.0
 GEN_C_PRO_HOME=${UTIL_ROOT}/${GEN_C_PRO_TOOL}/${GEN_C_PRO_VERSION}
 GEN_C_PRO_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}.cfg
 GEN_C_PRO_UTIL_CFG=${GEN_C_PRO_HOME}/conf/${GEN_C_PRO_TOOL}_util.cfg
